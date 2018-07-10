@@ -5,3 +5,12 @@
 .sws-navbar a {
     color: white;
 }
+.sws-company{
+    position: absolute;
+    top: 0;
+    left : 0;
+    padding-left: 5%;
+}
+.sws-company span:nth-child(odd) {
+    color:#EA8216;
+}
