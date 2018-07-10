@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ExtracteurTagPdfService } from '../Service/extracteurTagPdf';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+	private extraceur: ExtracteurTagPdfService;
+
+	constructor() {
+		this.extraceur = new ExtracteurTagPdfService();
+
+		this.extraceur.test();
+	}
+
+
+
+  	title = 'app';
 }
