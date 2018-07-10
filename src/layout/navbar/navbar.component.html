@@ -1,1 +1,31 @@
-<h1>navbar</h1>
+<ul class="sws-navbar nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link" href="#">Fonctionnalités</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Tarifs</a>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false">
+      Plus d'infos
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+      aria-expanded="false">
+      {{selectedLanguage}}
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      <div *ngFor="let lang of languageList">
+        <span class="dropdown-item" (click)="setLanguage(lang)" href="#">{{lang}}</span>
+      </div>
+    </div>
+  </li>
+</ul>

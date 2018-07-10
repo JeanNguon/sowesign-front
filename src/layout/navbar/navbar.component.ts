@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  title = 'navbar';
+  public languageList:string[] = ["français","english"];
+  public selectedLanguage: string;
+
+  ngOnInit(): void {
+    this.selectedLanguage = "français";
+    console.log(this.languageList);
+  }
+  setLanguage(language:string){
+    console.log(language);
+    this.selectedLanguage = language;
+  }
 }
