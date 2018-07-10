@@ -1,4 +1,12 @@
 .sws-container {
     width: 100%;
     height: 100%;
+    margin: 5%;
+    background-color: white;
+    box-shadow: 8px 8px 12px #aaa;
+}
+
+.drop-zone{
+    border: 2px dotted #EAEAEA !important;
+    border-radius: 30px !important;
 }

@@ -1,0 +1,28 @@
+<div class="center">
+    <h1>Création d'une nouvelle RDS</h1>
+    <h2>Déposer un fichier en drag&drop ou sélectionner un fichier à partir de votre ordinateur</h2>
+    <div id="sws-dropzone">
+        <file-drop headertext="Déposer votre fichier ici" (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+        </file-drop>
+    </div>
+    <div>
+        <button type="button" class="btn sws-button-1">Valider</button>
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom du fichier</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of files; let i=index">
+                    <td>
+                        <strong>{{ item.relativePath }}</strong>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

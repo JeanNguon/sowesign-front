@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { LayoutModule } from '../layout/navbar/navbar.module';
+import { FileDropModule } from 'ngx-file-drop';
+import { DragAnDropComponent } from './drag-and-drop/drag-and-drop.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DragAnDropComponent
   ],
   imports: [
     BrowserModule,
-    LayoutModule
+    LayoutModule,
+    FileDropModule
     
   ],
   providers: [],
