@@ -13,7 +13,7 @@ export class AppComponent {
   private state: number = 1;
 
   onDone(data: object) {
-  	console.log("event: passage à l'étape 2");
+  	console.log(data);
   	this.state = 2;
   	this.ref.detectChanges();
   }
