@@ -1,6 +1,7 @@
 <div class="center">
     <h1>Création d'une nouvelle RDS</h1>
     <h2>Déposer un fichier en drag&drop ou sélectionner un fichier à partir de votre ordinateur</h2>
+<!-- <<<<<<< HEAD
     <div id="sws-dropzone">
         <file-drop headertext="Déposer votre fichier ici" (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
         </file-drop>
@@ -26,5 +27,19 @@
             </tbody>
         </table>
     </div>
+======= -->
+    <!-- <div id="sws-dropzone">
+        <file-drop headertext="Déposer votre fichier ici" (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+        </file-drop>
+    </div> -->
+     <div id="sws-dropzone">
+         <file-drop headertext="Déposer votre fichier ici" (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+        </file-drop>
+     </div>
+<!-- >>>>>>> 5bf2fbb9e431a8cf6c9ed8e755ff0f4b1265e717 -->
 
-</div>
+     <button type="button"
+        class="btn btn-primary center btn-lg"
+        (click)="validate()"
+        type="submit">Valider</button>
+ </div>
