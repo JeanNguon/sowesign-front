@@ -1,4 +1,5 @@
 import { Administrator } from './administrator';
+import { Signataire } from './signataire';
 
 
 export class RDS {
@@ -21,4 +22,5 @@ export class RDS {
 	pdfFinal: string;
 	dateLimite: Date;
 	administrateur: Administrator;
+	signataires: Signataire[];
 };
