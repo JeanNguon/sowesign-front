@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from '../layout/navbar/navbar.module';
 import { FileDropModule } from 'ngx-file-drop';
 import { DragAnDropComponent } from './drag-and-drop/drag-and-drop.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -14,8 +16,8 @@ import { DragAnDropComponent } from './drag-and-drop/drag-and-drop.component';
   imports: [
     BrowserModule,
     LayoutModule,
-    FileDropModule
-    
+    FileDropModule,
+    HttpClientModule,    
   ],
   providers: [],
   bootstrap: [AppComponent]

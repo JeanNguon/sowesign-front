@@ -1,4 +1,8 @@
 <navbar-root></navbar-root>
 <div class="sws-container container">
-  <drag-and-drop></drag-and-drop>
+
+  <div *ngIf="state === 1">
+  	<drag-and-drop (done)="onDone($event)"></drag-and-drop>
+  </div>
+  
 </div>
