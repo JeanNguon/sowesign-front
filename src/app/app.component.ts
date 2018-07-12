@@ -35,40 +35,38 @@ export class AppComponent {
   	}
 
   	this.rds = new RDS();
-	this.rds.nom = data.nom;
-	this.rds.description = data.description;
-	/*this.rds.date = data.;*/
-	/*this.rds.heure: Date;*/
-	this.rds.lieu = data.lieu;
-	this.rds.urlComplementaire = data.urlComplementaire;
-	this.rds.sujet = data.sujet;
-	this.rds.corps = data.corps;
-	this.rds.nombreRelance = data.nombreRelance;
-	this.rds.periodicite = data.periodicite;
-	this.rds.delaisMinimum = data.delaisMinimum;
-	this.rds.entreprise = data.entreprise;
-	
-	this.rds.administrateur = administrator;
-	this.rds.signataires = signataires;
+    this.rds.pdf = data.pdf;
+  	this.rds.nom = data.nom;
+  	this.rds.description = data.description;
+  	/*this.rds.date = data.;*/
+  	/*this.rds.heure: Date;*/
+  	this.rds.lieu = data.lieu;
+  	this.rds.urlComplementaire = data.urlComplementaire;
+  	this.rds.sujet = data.sujet;
+  	this.rds.corps = data.corps;
+  	this.rds.nombreRelance = data.nombreRelance;
+  	this.rds.periodicite = data.periodicite;
+  	this.rds.delaisMinimum = data.delaisMinimum;
+  	this.rds.entreprise = data.entreprise;
+  	
+  	this.rds.administrateur = administrator;
+  	this.rds.signataires = signataires;
 
   	this.state = 2;
   	this.ref.detectChanges();
   }
 
   onDoneStep2(data: object) {
-  	console.log(data);
   	this.state = 3;
   	this.ref.detectChanges();
   }
 
   onDoneStep3(data: object) {
-  	console.log(data);
   	this.state = 4;
   	this.ref.detectChanges();
   }
 
   onDoneStep4(data: object) {
-  	console.log(data);
   	this.state = 5;
   	this.ref.detectChanges();
   }
