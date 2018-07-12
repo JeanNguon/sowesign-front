@@ -1,0 +1,20 @@
+
+<h2>Étape 3: Informations des signataires</h2>
+
+<div *ngFor="let signataire of signataires">
+    signataire {{ signataire.identifiant }} :
+    <label>Nom du signataire:
+      <input [(ngModel)]="signataire.nom" placeholder="Nom du signataire {{signataire.identifiant}}...">
+    </label>
+    <label>Prénom du signataire:
+      <input [(ngModel)]="signataire.prenom" placeholder="Prénom du signataire {{signataire.identifiant}}...">
+    </label>
+    <label>Entreprise du signataire:
+      <input [(ngModel)]="signataire.entreprise" placeholder="Entreprise du signataire {{signataire.identifiant}}...">
+    </label>
+    <label>Email du signataire:
+      <input [(ngModel)]="signataire.email" placeholder="Email du signataire {{signataire.identifiant}}...">
+    </label>
+</div>
+
+<button (click)="save()">save</button>

@@ -1,8 +1,22 @@
 <navbar-root></navbar-root>
 <div class="sws-container container">
-
   <div *ngIf="state === 1">
-  	<drag-and-drop (done)="onDone($event)"></drag-and-drop>
+  	<drag-and-drop (done)="onDoneStep1($event)"></drag-and-drop>
   </div>
-  
+
+  <div *ngIf="state === 2">
+  	<admin-form [administrator]="rds.administrateur" (done)="onDoneStep2($event)"></admin-form>
+  </div>
+
+  <div *ngIf="state === 3">
+  	<rds-form [rds]="rds" (done)="onDoneStep3($event)"></rds-form>
+  </div>
+
+  <div *ngIf="state === 4">
+  	<signataire-form [signataires]="rds.signataires" (done)="onDoneStep4($event)"></signataire-form>
+  </div>
+
+  <div *ngIf="state === 5">
+  	<confirmation></confirmation>
+  </div>
 </div>

@@ -1,0 +1,15 @@
+
+<h2>Étape 1: Informations de l'administrateur de la RDS</h2>
+<div>
+  <label>Nom:
+    <input [(ngModel)]="administrator.nom" placeholder="Nom...">
+  </label>
+   <label>Prénom:
+    <input [(ngModel)]="administrator.prenom" placeholder="Prénom...">
+  </label>
+   <label>Email:
+    <input [(ngModel)]="administrator.email" placeholder="Email...">
+  </label>
+</div>
+
+<button (click)="save()">save</button>
