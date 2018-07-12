@@ -5,17 +5,25 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from '../layout/navbar/navbar.module';
 import { FileDropModule } from 'ngx-file-drop';
 import { DragAnDropComponent } from './drag-and-drop/drag-and-drop.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NguCarouselModule } from '@ngu/carousel';
+import { CarouselComponent } from './carousel/carousel.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DragAnDropComponent
+    DragAnDropComponent,
+    DashboardComponent,
+    CarouselComponent
+
   ],
   imports: [
     BrowserModule,
     LayoutModule,
-    FileDropModule
-    
+    FileDropModule,
+    NguCarouselModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
