@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AdminFormComponent } from './admin-form/admin-form.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { RdsFormComponent } from './rds-form/rds-form.component';
 import { SignataireFormComponent } from './signataire-form/signataire-form.component';
 import { LayoutModule } from '../layout/navbar/navbar.module';
@@ -15,16 +16,18 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
-    DragAnDropComponent
+    DragAnDropComponent,
+    AdminFormComponent,
+    RdsFormComponent,
+    SignataireFormComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,
     LayoutModule,
     FileDropModule,
-    HttpClientModule,    
-    AdminFormComponent,
-    RdsFormComponent,
-    SignataireFormComponent
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

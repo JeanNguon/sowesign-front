@@ -2,6 +2,7 @@
 <h2>Étape 3: Informations des signataires</h2>
 
 <div *ngFor="let signataire of signataires">
+    signataire {{ signataire.identifiant }} :
     <label>Nom du signataire:
       <input [(ngModel)]="signataire.nom" placeholder="Nom du signataire {{signataire.identifiant}}...">
     </label>

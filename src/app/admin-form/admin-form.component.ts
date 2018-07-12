@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Administrator } from '../../Model/administrator';
 
 
@@ -10,12 +10,12 @@ import { Administrator } from '../../Model/administrator';
 export class AdminFormComponent implements OnInit {
 
 	@Input() administrator: Administrator;
+	@Output() done = new EventEmitter<object>();
 
   	ngOnInit(): void {
-	    this.administrator = new Administrator();
 	}
 
 	save(): void {
-		// TODO HTTP to save administrateur
+		this.done.emit(this.administrator);
 	}
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Administrator } from '../../Model/administrator';
 import { RDS } from '../../Model/rds';
 
@@ -11,12 +11,12 @@ import { RDS } from '../../Model/rds';
 export class RdsFormComponent implements OnInit {
 
 	@Input() rds: RDS;
+	@Output() done = new EventEmitter<object>();
 
   	ngOnInit(): void {
-	    this.rds = new RDS();
 	}
 
 	save(): void {
-		// TODO HTTP to save administrateur
+		this.done.emit(this.rds);
 	}
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { RDS } from '../../Model/rds';
 import { Signataire } from '../../Model/signataire';
 
@@ -11,16 +11,12 @@ import { Signataire } from '../../Model/signataire';
 export class SignataireFormComponent implements OnInit {
 
 	@Input() signataires: Signataire[];
+	@Output() done = new EventEmitter<object>();
 
   	ngOnInit(): void {
-	    this.signataires = [
-	    	new Signataire("001"),
-	    	new Signataire("002"),
-	    	new Signataire("003"),
-	    ];
 	}
 
 	save(): void {
-		// TODO HTTP to save administrateur
+		this.done.emit(this.signataires);
 	}
 }
