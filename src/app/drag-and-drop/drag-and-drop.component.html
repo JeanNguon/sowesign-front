@@ -2,13 +2,17 @@
     <h1>Création d'une nouvelle RDS</h1>
     <h2>Déposer un fichier en drag&drop ou sélectionner un fichier à partir de votre ordinateur</h2>
 
-     <div id="sws-dropzone">
-         <file-drop headertext="Déposer votre fichier ici" (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
-        </file-drop>
-     </div>
 
-     <button type="button"
-        class="btn btn-primary center btn-lg"
-        (click)="validate()"
-        type="submit">Valider</button>
- </div>
+    <div id="sws-dropzone">
+      <span class="sws-dropzone-text"><i class="fas fa-file-upload fa-5x"></i> <br> <p>Sélectionner un fichier</p> </span> 
+      <file-drop (onFileDrop)="dropped($event)" (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)">
+      </file-drop>
+      
+  </div>
+
+  <button type="button" class="btn btn-primary center btn-lg" data-toggle="modal" data-target="#infosPrivees" (click)="validate()"
+  type="submit">Valider</button>
+
+</div>
+
+

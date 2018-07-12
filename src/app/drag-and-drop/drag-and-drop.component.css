@@ -35,7 +35,7 @@ h1{
     color:#EA8216;
     font-size: 2em;
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 h2{
  
@@ -43,8 +43,7 @@ h2{
     font-size: 1em;
     text-align: center;
     margin-bottom: 5%;
-    font-family: 'Open Sans', sans-serif;
-}
+    font-family: 'Roboto', sans-serif;}
 
 .btn-primary {
     margin-top: 8%;
@@ -55,4 +54,5 @@ h2{
 .btn-primary:hover {
     background-color: #d17314 !important;
 }
+
 
