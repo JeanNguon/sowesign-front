@@ -1,3 +1,4 @@
+import { HomePageComponent } from './homepage/homepage.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -11,6 +12,9 @@ import { LayoutModule } from '../layout/navbar/navbar.module';
 import { FileDropModule } from 'ngx-file-drop';
 import { DragAnDropComponent } from './drag-and-drop/drag-and-drop.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from '../layout/not-found/page-not-found.component';
+import { AppRoutingModule } from './routing/routing.component';
+
 
 
 @NgModule({
@@ -18,9 +22,11 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     DragAnDropComponent,
     AdminFormComponent,
+    HomePageComponent,
     RdsFormComponent,
     SignataireFormComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -28,8 +34,12 @@ import { HttpClientModule } from '@angular/common/http';
     FileDropModule,
     HttpClientModule,
     FormsModule,
+    AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }
