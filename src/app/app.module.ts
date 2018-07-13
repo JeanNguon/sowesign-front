@@ -12,21 +12,9 @@ import { LayoutModule } from '../layout/navbar/navbar.module';
 import { FileDropModule } from 'ngx-file-drop';
 import { DragAnDropComponent } from './drag-and-drop/drag-and-drop.component';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from '../layout/not-found/page-not-found.component';
+import { AppRoutingModule } from './routing/routing.component';
 
-const appRoutes: Routes = [
-
-  {
-    path: 'accueil',
-    component: HomePageComponent
-  },
-  { path: '',
-    redirectTo: '/accueil',
-    pathMatch: 'full'
-  },
-  { path: 'page-not-found', component: PageNotFoundComponent }
-];
 
 
 @NgModule({
@@ -46,10 +34,8 @@ const appRoutes: Routes = [
     FileDropModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    )
+    AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
