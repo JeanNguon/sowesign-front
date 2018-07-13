@@ -1,0 +1,20 @@
+.left{float: left;}
+.right{float: right;}
+.bodyDashboard{
+  clear: both;
+}
+.page{
+  width: 90%;
+  margin: auto;
+  background-color: white;
+}
+.titleDashboard{
+  color: #ea8216;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.tableEcheance{text-align: center; width: 150px;}
+.echeance1{color: #ea8216;font-size: 1.8em}
+.echeance2{color: #ea8216;}
+.echeance1B{font-size: 0.7em;}
+.right a {float: right;color: #ea8216;}

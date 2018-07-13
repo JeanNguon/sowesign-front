@@ -1,0 +1,25 @@
+<ngu-carousel
+    [inputs]="carouselTile"
+    (carouselLoad)="myfunc($event)">
+      <ngu-item NguCarouselItem *ngFor="let item of signatureList">
+        <div class="blocHaveNotSigned" *ngIf="item.hasSigned">
+          <button type="button" name="button" class="btnRelancer">RELANCER</button>
+          <p class="relancePerson">Dernière relance le {{ dateCreationReunion.getDate() }}/{{ dateCreationReunion.getMonth() }}/{{ dateCreationReunion.getFullYear() }}</p>
+          <p class="person"> {{ item.name }} {{ item.firstname }}</p>
+          <p class="entreprise">{{ item.entreprise }}</p>
+        </div>
+        <div class="blocHaveNotSignedRelanced" *ngIf="item.hasSigned==false && item.relanced==true">
+          <button type="button" name="button" class="btnRelancerGris">RELANCER</button>
+          <p class="relancePerson">Dernière relance le 15/6/2018</p>
+          <p class="person"> {{ item.name }} {{ item.firstname }}</p>
+          <p class="entreprise">{{ item.entreprise }}</p>
+        </div>
+        <div class="blocHaveSigned" *ngIf="item.hasSigned==false && item.relanced==false">
+          <p class="signed">signé</p>
+          <p class="person"> {{ item.name }} {{ item.firstname }}</p>
+          <p class="entreprise">{{ item.entreprise }}</p>
+        </div>
+      </ngu-item>
+      <button NguCarouselPrev class='leftRs'>&lt;</button>
+      <button NguCarouselNext class='rightRs'>&gt;</button>
+</ngu-carousel>

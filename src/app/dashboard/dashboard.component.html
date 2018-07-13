@@ -1,0 +1,39 @@
+<div class="page">
+  <div class="headerDashboard">
+    <div class="titleDashboard">
+      <p>YOUR SIGNATURE</p>
+    </div>
+    <div class="progress" style="height: 35px;">
+      <div class="progress-bar bg-warning" role="progressbar" [ngStyle]="{width: PercentOfParticipantHaveSigned}" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+        <p><span>{{ nbrParticipantHaveSigned }}</span>/<span>{{ nbrParticipantTotal }} </span>Participants</p>
+
+      </div>
+    </div>
+    <div class="left">
+      <table class="tableEcheance">
+        <tr class="echeance1">
+          <td>{{ timer[3] }}</td>
+          <td>{{ timer[2] }}</td>
+          <td>{{ timer[1] }}</td>
+        </tr>
+        <tr class="echeance1B">
+          <td>DAYS</td>
+          <td>HOURS</td>
+          <td>MINUTES</td>
+        </tr>
+      </table>
+      <p class="echeance2">Echéance le {{ dateEcheance.getDate() }}/{{ dateEcheance.getMonth() }}/{{ dateEcheance.getFullYear() }}</p>
+    </div>
+    <div class="right">
+      <a href="#">Télécharger PDF</a>
+    </div>
+  </div>
+  <div class="bodyDashboard">
+
+
+    <carousel>
+
+    </carousel>
+
+  </div>
+</div>
